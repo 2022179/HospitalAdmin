@@ -32,7 +32,7 @@ public class patient {
         this.birthdate = birthdate;
         this.bloodType = bloodType;
         this.patientID = currentID;
-        System.out.println(name +" has a birthday on " + birthdate);
+        System.out.println(name +" has a birthday on the " + birthdate);
         currentID++;// every time you add a patient it will increement the ID for us 
     }
 // getters 

@@ -16,8 +16,8 @@ public class HospitalAdmin {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-        patient p1= new patient("Oglobe","25/03/2023","A+");
-        patient p2= new patient("Vernon","26/03/2023","O+");
+        patient p1= new patient("Oglobe","2023-03-25","A+");
+        patient p2= new patient("Vernon","2023-03-26","O+");
         // to get patient ID 
         System.out.println(p1.getPatientID());
         System.out.println(p2.getPatientID());
@@ -30,6 +30,11 @@ public class HospitalAdmin {
         }else{
             System.out.println("ohh no, something is wrong with your database");
         }
+        //adding P! to the database
+        DatabaseWritter dbw= new DatabaseWritter();
+        if(dbw.addpatient(p1)){
+        System.out.println("p1 added ");
+    }
     }
     
 }
