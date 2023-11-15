@@ -23,11 +23,16 @@ public class patient {
     //it is shared by ALL the objects of this class 
     //we use this to auto generate the patient IDSwith each patient
 
+    public static int getCurrentID() {
+        return currentID;
+    }
+
     public patient(String name, String birthdate, String bloodType) {
         this.name = name;
         this.birthdate = birthdate;
         this.bloodType = bloodType;
         this.patientID = currentID;
+        System.out.println(name +" has a birthday on " + birthdate);
         currentID++;// every time you add a patient it will increement the ID for us 
     }
 // getters 
