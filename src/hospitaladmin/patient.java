@@ -21,6 +21,7 @@ public class patient {
     private int patientID;
     private static int currentID =1;// this means its final and cant be changed 
     //it is shared by ALL the objects of this class 
+    //we use this to auto generate the patient IDSwith each patient
 
     public patient(String name, String birthdate, String bloodType) {
         this.name = name;
